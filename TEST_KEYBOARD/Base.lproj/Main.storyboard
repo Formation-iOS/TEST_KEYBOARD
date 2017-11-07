@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,73 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TEST_KEYBOARD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hulk" translatesAutoresizingMaskIntoConstraints="NO" id="DXE-RA-HKr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="362"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="362" id="dtd-cQ-8lx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toi aussi soit aussi fort que Hulk avec des hormones gratuites" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEJ-VK-NHL">
+                                <rect key="frame" x="16" y="392" width="343" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ce9-Jb-FUk">
+                                <rect key="frame" x="16" y="452" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MO3-es-DQ9">
+                                <rect key="frame" x="16" y="490" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJ0-qw-wxH">
+                                <rect key="frame" x="137.5" y="551" width="100" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="V1Q-vo-XRP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <state key="normal" title="Valider">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85098039219999999" green="0.24313725489999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ce9-Jb-FUk" firstAttribute="top" secondItem="ZEJ-VK-NHL" secondAttribute="bottom" constant="19" id="3pD-a0-Zs7"/>
+                            <constraint firstItem="ZEJ-VK-NHL" firstAttribute="top" secondItem="DXE-RA-HKr" secondAttribute="bottom" constant="30" id="4ES-ha-mRh"/>
+                            <constraint firstItem="xJ0-qw-wxH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4So-I9-nw5"/>
+                            <constraint firstItem="MO3-es-DQ9" firstAttribute="top" secondItem="ce9-Jb-FUk" secondAttribute="bottom" constant="8" id="5aZ-G7-hPm"/>
+                            <constraint firstItem="MO3-es-DQ9" firstAttribute="trailing" secondItem="ce9-Jb-FUk" secondAttribute="trailing" id="95T-sB-3Ti"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZEJ-VK-NHL" secondAttribute="trailing" constant="16" id="E4Y-dv-DYx"/>
+                            <constraint firstItem="xJ0-qw-wxH" firstAttribute="top" secondItem="MO3-es-DQ9" secondAttribute="bottom" constant="31" id="F5B-Pt-Gbl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ce9-Jb-FUk" secondAttribute="trailing" constant="16" id="KGg-bq-u7D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DXE-RA-HKr" secondAttribute="trailing" id="MFG-58-wP1"/>
+                            <constraint firstItem="ce9-Jb-FUk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MhS-Aa-WXS"/>
+                            <constraint firstItem="DXE-RA-HKr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vy2-BU-Ihe"/>
+                            <constraint firstItem="MO3-es-DQ9" firstAttribute="leading" secondItem="ce9-Jb-FUk" secondAttribute="leading" id="kl1-L0-Clb"/>
+                            <constraint firstItem="ZEJ-VK-NHL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tou-U0-HXb"/>
+                            <constraint firstItem="ce9-Jb-FUk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wDd-jc-w6o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="DXE-RA-HKr" secondAttribute="top" constant="20" id="zgj-z8-N5X"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hulk" width="215" height="322"/>
+    </resources>
 </document>
