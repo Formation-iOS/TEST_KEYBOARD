@@ -1,0 +1,18 @@
+PODS:
+  - IQKeyboardManagerSwift (5.0.4)
+  - MBProgressHUD (1.0.0)
+  - SwiftMessages (4.0.0)
+
+DEPENDENCIES:
+  - IQKeyboardManagerSwift
+  - MBProgressHUD
+  - SwiftMessages
+
+SPEC CHECKSUMS:
+  IQKeyboardManagerSwift: a0592bb636b10a9a1cf75d2b2c61144226226c84
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  SwiftMessages: cd565e0e7d095584be1770c012c6b5be4183b5ee
+
+PODFILE CHECKSUM: 8b55fd1cf9bdf60dc5d5a7b0c4f19f6daf8aecd3
+
+COCOAPODS: 1.2.1
